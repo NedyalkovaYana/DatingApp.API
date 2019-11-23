@@ -9,7 +9,7 @@ using DatingApp.API.Models;
 
 namespace DatingApp.API.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -18,20 +18,13 @@ namespace DatingApp.API.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> test()
+        //{
+        //    var values = await _context.Values.ToListAsync();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //    return Ok(values);
+        //}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
