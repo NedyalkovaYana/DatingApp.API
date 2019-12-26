@@ -92,7 +92,6 @@ namespace DatingApp.API.Controllers
             if (await _repo.SaveAll())
             {
                 var photoToReturn = _mapper.Map<PhotoForReturnDto>(photo);
-
                 return CreatedAtRoute("GetPhoto", new { id = photo.Id }, photoToReturn);
             }
                
@@ -141,7 +140,7 @@ namespace DatingApp.API.Controllers
             var photoFromRepo = await _repo.GetPhoto(id);
 
             if (photoFromRepo.IsMain)
-                return BadRequest("You cannot delete your main photo. Please select new photo to be main, before delete this one.");
+                return BadRequest("Please select a new photo as main, before deleting this one");
 
             if (photoFromRepo.PublicId != null)
             {
