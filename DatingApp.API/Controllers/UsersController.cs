@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using DatingApp.API.Data;
-using System.Threading.Tasks;
+﻿using System;
 using AutoMapper;
+using DatingApp.API.Data;
 using DatingApp.API.Dtos;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System;
-using DatingApp.API.Helpers;
 using DatingApp.API.Models;
+using DatingApp.API.Helpers;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DatingApp.API.Controllers
 {
